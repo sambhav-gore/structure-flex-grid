@@ -1,0 +1,19 @@
+{
+  "name": "structure-flex-grid",
+  "version": "0.1.0",
+  "description": "Framework agnostic, responsive, BEM-styles Flex Grid (Just the grid)",
+  "main": "src/index.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flexbox",
+    "flex",
+    "grid",
+    "sass",
+    "scss",
+    "BEM"
+  ],
+  "author": "Sambhav Gore <sambhavgore@gmail.com>",
+  "license": "MIT"
+}
