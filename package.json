@@ -15,5 +15,8 @@
     "BEM"
   ],
   "author": "Sambhav Gore <sambhavgore@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "breakpoint-sass": "^2.7.1"
+  }
 }
