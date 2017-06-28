@@ -1,8 +1,8 @@
 {
   "name": "structure-flex-grid",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Framework agnostic, responsive, BEM-styles Flex Grid (Just the grid)",
-  "main": "src/index.scss",
+  "main": "dist/structure-flex-grid.min.css",
   "scripts": {
     "clean": "rimraf ./dist",
     "lint": "sass-lint 'src/**/*.scss' -v",
