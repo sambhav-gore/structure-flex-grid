@@ -1,6 +1,5 @@
 @mixin page {
-
-    padding: map-get($page-paddings, 'small');
+    padding: map-get($page-paddings, "small");
 
     @if type-of($grid-breakpoints) == "map" {
         @each $br, $value in $grid-breakpoints {
