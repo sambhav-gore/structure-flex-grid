@@ -14,7 +14,7 @@
     "clean:demo": "rimraf ./build",
     "prebuild:demo": "npm run clean:demo && mkdir ./build",
     "build:demo": "cross-env NODE_ENV=production webpack --display-chunks --progress",
-    "server": "cross-env NODE_ENV=development nodemon -w 'docs/server/**/*.*' ./docs/server/main.js",
+    "server": "cross-env NODE_ENV=development nodemon -w 'demo/server/**/*.*' ./demo/server/main.js",
     "server:demo": "cross-env NODE_ENV=development webpack-dev-server",
     "deploy:demo": "git-directory-deploy --directory build --branch gh-pages"
   },

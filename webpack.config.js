@@ -33,12 +33,12 @@ const rules = {
   componentStyles: {
     test: /\.scss$/,
     use: ['raw-loader', 'postcss-loader', 'sass-loader'],
-    exclude: path.resolve('docs/src/common/styles')
+    exclude: path.resolve('demo/src/common/styles')
   },
   sharedStyles: {
     test: /\.scss$/,
     use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
-    include: path.resolve('docs/src/common/styles')
+    include: path.resolve('demo/src/common/styles')
   },
   html: {
     test: /\.html$/,
@@ -59,7 +59,7 @@ const config = module.exports = {};
 
 
 config.entry = {
-  main: './docs/src/main.ts'
+  main: './demo/src/main.ts'
 };
 
 config.resolve = {
@@ -107,8 +107,8 @@ config.plugins = [
 //  DEVELOPMENT or PRODUCTION
 //-------------------------------------
 if (ENV_DEVELOPMENT || ENV_PRODUCTION) {
-  config.entry.polyfills = './docs/src/polyfills.ts';
-  config.entry.vendor = './docs/src/vendor.ts';
+  config.entry.polyfills = './demo/src/polyfills.ts';
+  config.entry.vendor = './demo/src/vendor.ts';
 
   config.output = {
     filename: '[name].js',
@@ -129,7 +129,7 @@ if (ENV_DEVELOPMENT || ENV_PRODUCTION) {
       filename: 'index.html',
       hash: false,
       inject: 'body',
-      template: './docs/src/index.html'
+      template: './demo/src/index.html'
     })
   );
 }
@@ -176,7 +176,7 @@ if (ENV_PRODUCTION) {
   config.module.rules.push({
     test: /\.scss$/,
     loader: ExtractTextPlugin.extract('css-loader?-autoprefixer!postcss-loader!sass-loader'),
-    include: path.resolve('docs/src/common/styles')
+    include: path.resolve('demo/src/common/styles')
   });
 
   config.plugins.push(
