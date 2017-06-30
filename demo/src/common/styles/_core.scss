@@ -1,0 +1,10 @@
+@import
+'reset',
+'settings',
+'../../../../src/index.scss';
+
+body {
+  background: $base-background-color;
+  font-family: $base-font-family;
+  height: 100%;
+}
