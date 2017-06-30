@@ -16,7 +16,7 @@
     "build:demo": "cross-env NODE_ENV=production webpack --display-chunks --progress",
     "server": "cross-env NODE_ENV=development nodemon -w 'docs/server/**/*.*' ./docs/server/main.js",
     "server:demo": "cross-env NODE_ENV=development webpack-dev-server",
-    "deploy:demo": "git-directory-deploy --directory _build --branch gh-pages"
+    "deploy:demo": "git-directory-deploy --directory build --branch gh-pages"
   },
   "keywords": [
     "flexbox",
