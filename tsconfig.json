@@ -3,6 +3,7 @@
     "baseUrl": "./docs",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
     "lib": [
       "dom",
       "es6"

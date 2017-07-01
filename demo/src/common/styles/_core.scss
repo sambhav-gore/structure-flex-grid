@@ -1,7 +1,9 @@
 @import
-'reset',
-'settings',
-'../../../../src/index.scss';
+'_reset',
+'_settings',
+'../../../../src/index.scss',
+'_typography.scss',
+'_stuff.scss';
 
 body {
   background: $base-background-color;

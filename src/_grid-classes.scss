@@ -2,7 +2,6 @@
     @include grid-row;
     display: flex;
     flex-flow: row wrap;
-    width: 100%;
 }
 
 @mixin row--collapse ($column-selector: ".column") {

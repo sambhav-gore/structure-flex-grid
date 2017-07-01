@@ -1,0 +1,48 @@
+.hero {
+  padding: 20px;
+  background: darkturquoise;
+}
+
+section {
+  margin-bottom: $space-normal;
+}
+
+article {
+  padding:20px;
+}
+
+.example .column {
+  .column__contents {
+    outline: 1px solid darken(#e4e4e4, 20%);
+    padding: 10px;
+    background: #e4e4e4;
+    color: darken(#e4e4e4, 50%);
+  }
+}
+
+.gist__wrapper {
+  display: none;
+}
+
+.gist-toggler__container {
+  margin-bottom: 12px;
+}
+
+.gist-toggler {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0 16px;
+  color: #ffffff;
+  min-height: 28px;
+  line-height: 28px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background: #03A9F4;
+  font-weight: 300;
+  font-size: 12px;
+  border-radius: 2px;
+
+  &:hover {
+
+  }
+}

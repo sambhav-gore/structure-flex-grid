@@ -1,5 +1,4 @@
 @import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
 @import "structure";
 
-@include structure-selectors;
 @include grid-selectors;

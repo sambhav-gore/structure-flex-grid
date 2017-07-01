@@ -6,18 +6,104 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500" rel="stylesheet">
+
 
   <title>Structure Grid Demo</title>
 </head>
 
 <body>
-  Structure
-  <p></p>
-  <div class="row">
-    <div class="column column--small--4">Column 1</div>
-    <div class="column column--small--4">Column 2</div>
-    <div class="column column--small--4">Column 3</div>
-  </div>
+  <header>
+    <section class="hero row row--collapse row--align--center">
+      <div class="column column--shrink">
+        <img src="/structure-flex-grid/images/Structure-logo.png" alt="Structure Logo">
+        <h1 class="hero-name">
+          Structure
+        </h1>
+      </div>
+    </section>
+  </header>
+  <section class="main">
+    <div class="container">
+      <div class="row row--collapse">
+        <div class="column column--small-2">Menu</div>
+        <div class="column column--small-10">
+          <article>
+            <header>
+              <h2>Rows and Columns</h2>
+            </header>
+            <section>
+              <p>
+                Easy to remember and simple, just add `.row` for Rows and `.column` for Columns. It will automatically be placed evenly distributed.
+                Any number of columns can be placed in a row.
+              </p>
+            </section>
+            <section class="example">
+              <div class="row">
+                <div class="column column--small-4">
+                  <div class="column__contents">
+                    Col 1
+                  </div>
+                </div>
+                <div class="column column--small-4">
+                  <div class="column__contents">
+                    Col 2
+                  </div>
+                </div>
+                <div class="column column--small-4">
+                  <div class="column__contents">
+                    Col 3
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/459ba772cd2e55ca58e5fa01acccbca9.js"></script>
+              </div>
+            </section>
+            <h3>Collapsed row (No gutters)</h3>
+            <p>
+              Add `row--collapse` to the row element (both classes `row` and `row--collapse`).
+              <br/>
+              *Tip: `--collpase` is a 'modifier' which modifies how the row element behaves when this modifier is applied.
+              <a href="http://getbem.com/">Read more about BEM</a>.
+              <br/>
+              Note: When making full-width page it is important to add row-collapse to the outermost row.
+            </p>
+            <section class="example">
+              <div class="row row--collapse">
+                <div class="column">
+                  <div class="column__contents">
+                    Col 1
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="column__contents">
+                    Col 2
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="column__contents">
+                    Col 3
+                  </div>
+                </div>
+              </div>
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show code</span>
+                <div class="gist__container">
+                  <script src="https://gist.github.com/sambhav-gore/46434758577afb2b1ca88ccd9ed09287.js"></script>
+                </div>
+              </div>
+            </section>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
