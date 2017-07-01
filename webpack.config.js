@@ -121,9 +121,9 @@ if (ENV_DEVELOPMENT || ENV_PRODUCTION) {
       name: ['vendor', 'polyfills'],
       minChunks: Infinity
     }),
-    // new CopyWebpackPlugin([
-    //   {from: './assets/favicons', to: '.'}
-    // ]),
+    new CopyWebpackPlugin([
+      {from: './demo/src/common/images', to: './images/'}
+    ]),
     new HtmlWebpackPlugin({
       chunkSortMode: 'dependency',
       filename: 'index.html',
