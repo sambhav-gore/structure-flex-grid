@@ -1,6 +1,6 @@
 {
   "name": "structure-flex-grid",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "Framework agnostic, responsive, BEM-styles Flex Grid (Just the grid)",
   "main": "dist/structure-flex-grid.min.css",
   "scripts": {
