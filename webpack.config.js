@@ -122,7 +122,8 @@ if (ENV_DEVELOPMENT || ENV_PRODUCTION) {
       minChunks: Infinity
     }),
     new CopyWebpackPlugin([
-      {from: './demo/src/common/images', to: './images/'}
+      {from: './demo/src/common/images', to: './images/'},
+      {from: './demo/src/common/favicon', to: '.'}
     ]),
     new HtmlWebpackPlugin({
       chunkSortMode: 'dependency',

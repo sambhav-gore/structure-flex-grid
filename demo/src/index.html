@@ -13,6 +13,25 @@
 </head>
 
 <body>
+  <div class="toolbar__fixed">
+    <div class="row row--collapse row--align--middle row--align--justify">
+      <div class="column column--shrink">
+        <img src="/structure-flex-grid/images/Structure-logo.png" alt="Structure Logo" class="toolbar__logo">
+      </div>
+      <div class="column">
+        <h1 class="toolbar__title">
+          Structure
+        </h1>
+      </div>
+      <div class="column column--shrink">
+        <a href="https://github.com/sambhav-gore/structure-flex-grid" target="_blank"
+           class="github-link"
+           title="Visit the Github repository">
+          <img src="/structure-flex-grid/images/github-512.png" alt="Github Logo" class="github__logo">
+        </a>
+      </div>
+    </div>
+  </div>
   <header>
     <section class="hero row row--collapse row--align--center">
       <div class="column column--shrink">
@@ -26,11 +45,99 @@
   <section class="main">
     <div class="container">
       <div class="row row--collapse">
-        <div class="column column--small-2">Menu</div>
-        <div class="column column--small-10">
+
+        <!--Sidebar menu-->
+        <div class="column column--small-3">
+          <ul class="side-menu">
+            <li class="side-menu__item">
+              <span class="anchor-link" data-target="rows-and-columns">Rows and Columns</span>
+            </li>
+            <li class="side-menu__item">
+              <span class="anchor-link" data-target="responsive-grid">Responsive Grid</span>
+            </li>
+            <li class="side-menu__item">
+              <span class="anchor-link" data-target="grid-column-sizes">Grid Column Sizes</span>
+            </li>
+            <li class="side-menu__item">
+              <span class="anchor-link" data-target="shrink-columns">Shrink Columns</span>
+            </li>
+            <li class="side-menu__item">
+              <span class="anchor-link" data-target="horizontal-alignment">Horizontal Alignment</span>
+            </li>
+            <li class="side-menu__item">
+              <span class="anchor-link" data-target="vertical-alignment">Vertical Alignment</span>
+            </li>
+            <li class="side-menu__item">
+              <span class="anchor-link" data-target="block-grid">Block Grid</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="column column--small-9">
+          <!-- Introduction -->
           <article>
             <header>
-              <h2>Rows and Columns</h2>
+              <h2>Introduction</h2>
+            </header>
+            <section>
+              <p>
+                Structure Flex Grid is a flex-box based grid system for quickly creating the page structure for your html pages.
+                Structure follows BEM naming conventions to clearly separate modifiers from elements.
+                You can read more about BEM at <a href="http://getbem.com" target="_blank">getbem.com</a>.
+              </p>
+            </section>
+            <section>
+              Structure Flex Grid only provides you with the grid to make layout of the pages,
+              which means you can easily combine Structure with any other library like Angular-Material.
+              <br /><br/>
+              It packs some very useful modifiers for rows and columns to achieve the layout of the page you are looking for.
+              For example my favorite "--shrink" modifier for columns which I use heavily in my designs. OR "--align--justify" modifier for rows
+              which is very useful in making toolbars or rows which should align items to left and right edges.
+              <br /><br />
+              Scroll down to read more about all the modifiers.
+            </section>
+          </article>
+
+          <!-- Installation and usage-->
+          <article>
+            <header>
+              <a name="installation"></a><h2>Installation Instructions</h2>
+            </header>
+            <section>
+              <p>
+                You can install Structure Flex Grid as an NPM package or you can insert directly in your html page:
+              </p>
+            </section>
+            <section>
+              <h3>Installing with NPM</h3>
+              <p>
+                Install using NPM with following command
+                <br/>
+                <br/>
+                npm install structure-flex-grid
+                <br/>
+                <br/>
+                After installing import it in your scss file:
+                <br/>
+                <br/>
+                @import '~structure-flex-grid';
+              </p>
+            </section>
+            <section>
+              <h3>Insert directly in your HTML file</h3>
+              <p>
+                You can get the lastest version from unpkg.com. In the &lt;head&gt; tag of your .html file add:
+                <br/>
+                <br/>
+                &lt;link href="//unpkg.com/structure-flex-grid" rel="stylesheet"&gt;
+            </section>
+          </article>
+
+
+          <!--ROWS AND COLUMNS-->
+          <article>
+            <header>
+              <a name="rows-and-columns"></a><h2>Rows and Columns</h2>
             </header>
             <section>
               <p>
@@ -65,15 +172,18 @@
                 <script src="https://gist.github.com/sambhav-gore/459ba772cd2e55ca58e5fa01acccbca9.js"></script>
               </div>
             </section>
-            <h3>Collapsed row (No gutters)</h3>
-            <p>
-              Add `row--collapse` to the row element (both classes `row` and `row--collapse`).
-              <br/>
-              *Tip: `--collpase` is a 'modifier' which modifies how the row element behaves when this modifier is applied.
-              <a href="http://getbem.com/">Read more about BEM</a>.
-              <br/>
-              Note: When making full-width page it is important to add row-collapse to the outermost row.
-            </p>
+            <section>
+              <h3>Collapsed row (No gutters)</h3>
+              <p>
+                Add `row--collapse` to the row element (both classes `row` and `row--collapse`).
+                <br/>
+                *Tip: `--collpase` is a 'modifier' which modifies how the row element behaves when this modifier is
+                applied.
+                <a href="http://getbem.com/" target="_blank">Read more about BEM</a>.
+                <br/>
+                Note: When making full-width page it is important to add row-collapse to the outermost row.
+              </p>
+            </section>
             <section class="example">
               <div class="row row--collapse">
                 <div class="column">
@@ -92,11 +202,653 @@
                   </div>
                 </div>
               </div>
+            </section>
+            <section class="gist__container">
               <div class="gist-toggler__container">
-                <span class="gist-toggler">Show code</span>
-                <div class="gist__container">
-                  <script src="https://gist.github.com/sambhav-gore/46434758577afb2b1ca88ccd9ed09287.js"></script>
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/46434758577afb2b1ca88ccd9ed09287.js"></script>
+              </div>
+            </section>
+          </article>
+
+          <!-- RESPONSIVE GRID-->
+          <article>
+            <header>
+              <a name="responsive-grid"></a><h2>Responsive Grid</h2>
+            </header>
+            <section>
+              <p>
+                There are 4 breakpoints for the media queries, which are as follows :
+                <br/>
+                'small' for phones (320px); 'medium' for tablet sizes (600px); 'large' for desktop sizes (1024px); and; 'huge' for larger screens (1280px);
+                <br/>
+                You can use classes for columns as :
+                <br/>
+                column--[small|medium|large|huge]-[1-12]
+                <br/>
+                examples: column--large-6 OR column--medium-12
+                <br/>
+                Example below shows columns which will show as 3 columns (of size 4) on large screen but will take full width on medium and small screens
+                Resize your browser window to see it take effect.
+              </p>
+            </section>
+            <section class="example">
+              <div class="row">
+                <div class="column column--large-4 column--medium-12">
+                  <div class="column__contents">Column large-4 / medium-12</div>
                 </div>
+                <div class="column column--large-4 column--medium-12">
+                  <div class="column__contents">Column large-4 / medium-12</div>
+                </div>
+                <div class="column column--large-4 column--medium-12">
+                  <div class="column__contents">Column large-4 / medium-12</div>
+                </div>
+              </div>
+            </section>
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/d6af65937909722cbe7b0a79853b333d.js"></script>
+              </div>
+            </section>
+          </article>
+
+          <!-- GRID COLUMN SIZES-->
+          <article>
+            <header>
+              <a name="grid-column-sizes"></a><h2>Grid Column Sizes</h2>
+            </header>
+            <section class="example">
+              <div class="row">
+                <div class="column column--small-2">
+                  <div class="column__contents column__contents--center">2</div>
+                </div>
+                <div class="column column--small-10">
+                  <div class="column__contents column__contents--center">10</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column column--small-3">
+                  <div class="column__contents column__contents--center">3</div>
+                </div>
+                <div class="column column--small-9">
+                  <div class="column__contents column__contents--center">9</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column column--small-4">
+                  <div class="column__contents column__contents--center">4</div>
+                </div>
+                <div class="column column--small-8">
+                  <div class="column__contents column__contents--center">8</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column column--small-5">
+                  <div class="column__contents column__contents--center">5</div>
+                </div>
+                <div class="column column--small-7">
+                  <div class="column__contents column__contents--center">7</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column column--small-6">
+                  <div class="column__contents column__contents--center">6</div>
+                </div>
+                <div class="column column--small-6">
+                  <div class="column__contents column__contents--center">6</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column column--small-4">
+                  <div class="column__contents column__contents--center">4</div>
+                </div>
+                <div class="column column--small-4">
+                  <div class="column__contents column__contents--center">4</div>
+                </div>
+                <div class="column column--small-4">
+                  <div class="column__contents column__contents--center">4</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column column--small-3">
+                  <div class="column__contents column__contents--center">3</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents column__contents--center">3</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents column__contents--center">3</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents column__contents--center">3</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column column--small-2">
+                  <div class="column__contents column__contents--center">2</div>
+                </div>
+                <div class="column column--small-2">
+                  <div class="column__contents column__contents--center">2</div>
+                </div>
+                <div class="column column--small-2">
+                  <div class="column__contents column__contents--center">2</div>
+                </div>
+                <div class="column column--small-2">
+                  <div class="column__contents column__contents--center">2</div>
+                </div>
+                <div class="column column--small-2">
+                  <div class="column__contents column__contents--center">2</div>
+                </div>
+                <div class="column column--small-2">
+                  <div class="column__contents column__contents--center">2</div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="column column--small-1">
+                  <div class="column__contents column__contents--center">1</div>
+                </div>
+                <div class="column column--small-1">
+                  <div class="column__contents column__contents--center">1</div>
+                </div>
+                <div class="column column--small-1">
+                  <div class="column__contents column__contents--center">1</div>
+                </div>
+                <div class="column column--small-1">
+                  <div class="column__contents column__contents--center">1</div>
+                </div>
+                <div class="column column--small-1">
+                  <div class="column__contents column__contents--center">1</div>
+                </div>
+                <div class="column column--small-1">
+                  <div class="column__contents column__contents--center">1</div>
+                </div>
+                <div class="column column--small-1">
+                  <div class="column__contents column__contents--center">1</div>
+                </div>
+                <div class="column column--small-1">
+                  <div class="column__contents column__contents--center">1</div>
+                </div>
+                <div class="column column--small-1">
+                  <div class="column__contents column__contents--center">1</div>
+                </div>
+                <div class="column column--small-1">
+                  <div class="column__contents column__contents--center">1</div>
+                </div>
+                <div class="column column--small-1">
+                  <div class="column__contents column__contents--center">1</div>
+                </div>
+                <div class="column column--small-1">
+                  <div class="column__contents column__contents--center">1</div>
+                </div>
+              </div>
+            </section>
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/72b11e40908570711ad4925829e4e948.js"></script>
+              </div>
+            </section>
+          </article>
+
+          <!--SHRINK COLUMNS-->
+          <article>
+            <header>
+              <a name="shrink-columns"></a><h2>Shrink Columns</h2>
+            </header>
+            <section>
+              <h3>Shrink One Column</h3>
+              <p>
+                Add `column--shrink` modifier class to the column which should shrink.
+                <br/>
+                When this class is applied, the column shrinks to size of its contents.
+              </p>
+            </section>
+            <section class="example">
+              <div class="row">
+                <div class="column column--shrink">
+                  <div class="column__contents">
+                    This column shrinks
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="column__contents">
+                    ... And This Column fills up remaining space
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/e9dac9021ed3822eb4bace6f3abb39c8.js"></script>
+              </div>
+            </section>
+
+            <section>
+              <h3>Shrink Multiple Columns</h3>
+              <p>
+                Your can apply `column--shrink` to multiple columns and the other columns will fill up the remaining space.
+                <br />
+                This is very useful in creating items which have multiple links or icons which are right aligned.
+                You can simply add `column--shrink` class to each column in the right, something similar to following example:
+              </p>
+            </section>
+            <section class="example">
+              <div class="row">
+                <div class="column">
+                  <div class="column__contents">
+                    Title of the item here
+                  </div>
+                </div>
+                <div class="column column--shrink">
+                  <div class="column__contents">
+                    Link One
+                  </div>
+                </div>
+                <div class="column column--shrink">
+                  <div class="column__contents">
+                    Link Two
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/3e4dc0608fec7fe23e9693ca458b72db.js"></script>
+              </div>
+            </section>
+
+            <section>
+              <h3>Combine it with `row--collapse`</h3>
+              <p>
+                Building on top of above example, you can combine it with row--collapse modifer for row to get rid of the padding:
+              </p>
+            </section>
+            <section class="example">
+              <div class="row row--collapse">
+                <div class="column">
+                  <div class="column__contents">
+                    Title of the item here
+                  </div>
+                </div>
+                <div class="column column--shrink">
+                  <div class="column__contents">
+                    Link One
+                  </div>
+                </div>
+                <div class="column column--shrink">
+                  <div class="column__contents">
+                    Link Two
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/7a91ba7aa0a802921d67de2c042d665c.js"></script>
+              </div>
+            </section>
+          </article>
+
+          <!--HORIZONTAL ALIGNMENT-->
+          <article>
+            <header>
+              <a name="horizontal-alignment"></a><h2>Horizontal Alignment</h2>
+            </header>
+            <section>
+              <h3>Center Align</h3>
+              <p>
+                Add `row--align--center` modifier class to the row to align columns to center
+              </p>
+            </section>
+            <section class="example">
+              <div class="row row--align--center">
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 1</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 2</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 3</div>
+                </div>
+              </div>
+            </section>
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/9781e9444a57e97591b8c389bd3bd10a.js"></script>
+              </div>
+            </section>
+            <section>
+              <h3>Left Align</h3>
+              <p>
+                Add `row--align--left` modifier class to the row to align columns to left
+              </p>
+            </section>
+            <section class="example">
+              <div class="row row--align--left">
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 1</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 2</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 3</div>
+                </div>
+              </div>
+            </section>
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/687de6e6be6b72fe4ee6c8f33656f9ca.js"></script>
+              </div>
+            </section>
+            <section>
+              <h3>Right Align</h3>
+              <p>
+                Add `row--align--right` modifier class to the row to align columns to right
+              </p>
+            </section>
+            <section class="example">
+              <div class="row row--align--right">
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 1</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 2</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 3</div>
+                </div>
+              </div>
+            </section>
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/1b2710d439120ba3bde43bcb01f4e19d.js"></script>
+              </div>
+            </section>
+
+            <section>
+              <h3>Align Spaced</h3>
+              <p>
+                Add `row--align--spaced` modifier class to the row to align columns in a distributed way.
+                The remaining space of row will be evenly distributed around the columns
+              </p>
+            </section>
+            <section class="example">
+              <div class="row row--align--spaced">
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 1</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 2</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 3</div>
+                </div>
+              </div>
+            </section>
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/9d4ed0db870e683ab972f76a69a5a865.js"></script>
+              </div>
+            </section>
+
+
+            <section>
+              <h3>Align Justified</h3>
+              <p>
+                Add `row--align--justify` modifier class to the row to align columns in a justified manner.
+                First column will stick to left edge, Last column will stick to the right edge.
+                <br />
+                Remaining Space will be distributed evenly.
+              </p>
+            </section>
+            <section class="example">
+              <div class="row row--align--justify">
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 1</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 2</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 3</div>
+                </div>
+              </div>
+            </section>
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/408ff22bc113b58c61358ed879e0a035.js"></script>
+              </div>
+            </section>
+          </article>
+
+          <!--VERTICAL ALIGNMENT-->
+          <article>
+            <header>
+              <a name="vertical-alignment"></a><h2>Vertical Alignment</h2>
+            </header>
+            <section>
+              <h3>Top Align</h3>
+              <p>
+                Add `row--align--top` modifier class to the row to align columns to top.
+              </p>
+            </section>
+            <section class="example">
+              <div class="row row--align--top">
+                <div class="column column--small-3">
+                  <div class="column__contents">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, fuga, sit,
+                    deleniti magnam voluptas provident ea excepturi quas assumenda harum quod tempore quo
+                    vel accusamus ducimus sint exercitationem repellat blanditiis et dolor qui. Voluptate,
+                    saepe porro modi dolore deleniti cum itaque fugit.
+                  </div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 2</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 3</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 4</div>
+                </div>
+              </div>
+            </section>
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/193e371a13692cb0f0f71a555df44636.js"></script>
+              </div>
+            </section>
+
+            <section>
+              <h3>Middle Align</h3>
+              <p>
+                Add `row--align--middle` modifier class to the row to align columns to middle.
+              </p>
+            </section>
+            <section class="example">
+              <div class="row row--align--middle">
+                <div class="column column--small-3">
+                  <div class="column__contents">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, fuga, sit,
+                    deleniti magnam voluptas provident ea excepturi quas
+                  </div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 2</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 3</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 4</div>
+                </div>
+              </div>
+            </section>
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/afecb6a4f876ecad997144e427f37081.js"></script>
+              </div>
+            </section>
+
+            <section>
+              <h3>Bottom Align</h3>
+              <p>
+                Add `row--align--bottome` modifier class to the row to align columns to bottom.
+              </p>
+            </section>
+            <section class="example">
+              <div class="row row--align--bottom">
+                <div class="column column--small-3">
+                  <div class="column__contents">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, fuga, sit,
+                    deleniti magnam voluptas provident ea excepturi quas
+                  </div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 2</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 3</div>
+                </div>
+                <div class="column column--small-3">
+                  <div class="column__contents">Col 4</div>
+                </div>
+              </div>
+            </section>
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/a60cd599f763809964e39786c08bbfe2.js"></script>
+              </div>
+            </section>
+
+            <section>
+              <h3>Self Aligning Columns</h3>
+              <p>
+                There are three different self--align modifiers available which can be applied to the columns to self-align the columns:
+                <ul>
+                  <li>`column--self-align--top`: Aligns column to the top</li>
+                  <li>`column--self-align--middle`: Aligns column to middle</li>
+                  <li>`column--self-align--bottom`: Aligns column to the bottom</li>
+                </ul>
+              </p>
+            </section>
+            <section class="example">
+              <div class="row">
+                <div class="column column--small-3">
+                  <div class="column__contents">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id,
+                    alias molestiae rerum illum laborum consequatur voluptates aspernatur delectus saepe accusantium.
+                    Vel, quasi totam quae nemo ratione!
+                  </div>
+                </div>
+                <div class="column column--small-3 column--align-self--top">
+                  <div class="column__contents">Top Aligned</div>
+                </div>
+                <div class="column column--small-3 column--align-self--middle">
+                  <div class="column__contents">Middle Aligned</div>
+                </div>
+                <div class="column column--small-3 column--align-self--bottom">
+                  <div class="column__contents">Bottom Aligned</div>
+                </div>
+              </div>
+            </section>
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/c4a5d5c1f39651dabbce95d6c733aa12.js"></script>
+              </div>
+            </section>
+
+          </article>
+
+          <!--BLOCK GRID-->
+          <article>
+            <header>
+              <a name="block-grid"></a><h2>Block Grid</h2>
+            </header>
+            <section>
+              <p>
+                In a `Block Grid` instead of specifying the size for each column, you just let the row know how many columns you want in a row.
+                This is great for making responsive pages, as you can specify something like - 5 columns on large screen, and three columns on meduim screen, and
+                1 column per row on small screens. This way you don't have to add different column sizes for each column.
+                <br /> <br />
+                Note: block-grid is not a modifier, rather it is a way to define the grid columns. This needs the .row class applied to the block as well
+                <br /> <br />
+                Resize this page to see how the following block grid changes from 5 columns per row to 1 column per row:
+              </p>
+            </section>
+            <section class="example">
+              <div class="row block-grid--small-1 block-grid--medium-1 block-grid--large-5 ">
+                <div class="column">
+                  <div class="column__contents">
+                    Col 1
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="column__contents">Col 2</div>
+                </div>
+                <div class="column">
+                  <div class="column__contents">Col 3</div>
+                </div>
+                <div class="column">
+                  <div class="column__contents">Col 4</div>
+                </div>
+                <div class="column">
+                  <div class="column__contents">Col 5</div>
+                </div>
+              </div>
+            </section>
+            <section class="gist__container">
+              <div class="gist-toggler__container">
+                <span class="gist-toggler">Show markup</span>
+              </div>
+              <div class="gist__wrapper">
+                <script src="https://gist.github.com/sambhav-gore/f9db788fda4cfff08a8724dba52c0878.js"></script>
               </div>
             </section>
           </article>

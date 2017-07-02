@@ -19,4 +19,24 @@ $(() => {
         $(this).closest('.gist__container').find('.gist__wrapper').toggle();
         $(this).text(newText);
     });
+
+    $(".anchor-link").click(function() {
+       let targetAnchor = $(this).attr('data-target');
+        scrollToAnchor(targetAnchor);
+    });
+
+    function scrollToAnchor(aid){
+        var aTag = $("a[name='"+ aid +"']");
+        $('html,body').animate({scrollTop: aTag.offset().top - 80},'fast');
+    }
+
+    var sideMenu = $(".side-menu");
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll >= 385) {
+            sideMenu.addClass("side-menu--fixed");
+        } else {
+            sideMenu.removeClass("side-menu--fixed");
+        }
+    });
 });

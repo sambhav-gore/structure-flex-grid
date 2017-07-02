@@ -1,6 +1,66 @@
+.toolbar__fixed {
+  max-height: 54px;
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  z-index: 100;
+}
+
+.toolbar__logo {
+  height: 34px;
+  margin: 10px 24px
+}
+
+.toolbar__title {
+  margin: 0 0 4px;
+  text-transform: uppercase;
+  font-size: 28px;
+  line-height: 26px;
+}
+
+.github-link {
+  padding: 8px 12px;
+  margin: 0 12px;
+
+  .github__logo {
+    height: 32px;
+  }
+}
+
 .hero {
-  padding: 20px;
-  background: darkturquoise;
+  margin-top: 54px;
+  padding: 42px 20px 24px;
+  background: #03A9F4 linear-gradient(135deg, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%);
+}
+
+.container {
+  padding: 0 24px;
+}
+
+ul.side-menu {
+  list-style: none outside none;
+  font-size: 0.85rem;
+}
+
+.side-menu--fixed {
+  position: fixed;
+  width: calc(25% - 12px);
+  top: 82px;
+}
+
+.side-menu__item {
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.anchor-link {
+  display: block;
+  padding: 14px 24px;
+  background: #F5F5F5;
+  cursor: pointer;
 }
 
 section {
@@ -8,41 +68,50 @@ section {
 }
 
 article {
-  padding:20px;
+  padding: 0 36px 36px;
 }
 
-.example .column {
-  .column__contents {
-    outline: 1px solid darken(#e4e4e4, 20%);
-    padding: 10px;
-    background: #e4e4e4;
-    color: darken(#e4e4e4, 50%);
+.example {
+  .row + .row {
+    margin-top: 20px;
+  }
+  .column {
+    .column__contents {
+      outline: 1px solid darken(#e4e4e4, 20%);
+      padding: 10px;
+      background: #e4e4e4;
+      color: darken(#e4e4e4, 50%);
+
+      &--center {
+        text-align: center;
+      }
+    }
   }
 }
 
-.gist__wrapper {
-  display: none;
-}
-
-.gist-toggler__container {
-  margin-bottom: 12px;
-}
-
-.gist-toggler {
-  display: inline-block;
-  cursor: pointer;
-  padding: 0 16px;
-  color: #ffffff;
-  min-height: 28px;
-  line-height: 28px;
-  vertical-align: middle;
-  text-transform: uppercase;
-  background: #03A9F4;
-  font-weight: 300;
-  font-size: 12px;
-  border-radius: 2px;
-
-  &:hover {
-
+  .gist__wrapper {
+    display: none;
   }
-}
+
+  .gist-toggler__container {
+    margin-bottom: 12px;
+  }
+
+  .gist-toggler {
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 16px;
+    color: #ffffff;
+    min-height: 28px;
+    line-height: 28px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    background: #03A9F4;
+    font-weight: 300;
+    font-size: 12px;
+    border-radius: 2px;
+
+    &:hover {
+
+    }
+  }
