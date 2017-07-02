@@ -1,6 +1,6 @@
 {
   "name": "structure-flex-grid",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Framework agnostic, responsive, BEM-styles Flex Grid (Just the grid)",
   "main": "dist/structure-flex-grid.min.css",
   "scripts": {
@@ -29,12 +29,11 @@
   "author": "Sambhav Gore <sambhavgore@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@types/jquery": "^3.2.5",
-    "breakpoint-sass": "^2.7.1",
-    "jquery": "^3.2.1"
+    "breakpoint-sass": "^2.7.1"
   },
   "devDependencies": {
     "@types/core-js": "^0.9.41",
+    "@types/jquery": "^3.2.5",
     "@types/node": "^8.0.2",
     "autoprefixer": "^7.1.1",
     "awesome-typescript-loader": "^3.1.3",
@@ -48,6 +47,7 @@
     "git-directory-deploy": "^1.5.1",
     "html-webpack-plugin": "^2.29.0",
     "install": "^0.10.1",
+    "jquery": "^3.2.1",
     "morgan": "^1.8.2",
     "node-sass": "^4.5.3",
     "nodemon": "^1.11.0",
